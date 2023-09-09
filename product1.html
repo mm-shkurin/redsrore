@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>AppleRedStore - Product</title>
+		<link rel="stylesheet" href="product.css"/>
+	</head>
+	<body>
+	<div class="contr">
+        <div class="head">
+         <div class="head_wrap"> 
+         <nav class="one">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="registration.html">Регистрация</a></li>
+            <li><a href="box.html">Корзина</a></li>
+         </ul>
+        </nav>          
+	    </div>            
+        <div class="d7">
+         <img class=f4 src="Group 2 (3).png">    
+            <form>
+                <input type="text" placeholder="Поиск">
+                <button type="submit"></button>
+            </form>
+        </div>
+        </div>
+        <div class="content">
+            <div class="slide_content">
+            <div class="slide">
+                <div class="mySlides fade">
+                    <img class=php_prod src="image 40.png">
+                </div>
+                <div class="mySlides fade">
+                    <img class=php_prod src="image 41.png">
+                </div>
+                <div class="mySlides fade">
+                    <img class=php_prod src="image 42.png">
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+    </body>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+    </script>		
+    
+</html>    
